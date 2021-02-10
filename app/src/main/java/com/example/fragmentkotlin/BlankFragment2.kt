@@ -12,7 +12,7 @@ class BlankFragment2 : Fragment() {
     private lateinit var binding: FragmentBlank2Binding;
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = FragmentBlank2Binding.inflate(layoutInflater)
+
         super.onCreate(savedInstanceState)
 
     }
@@ -20,8 +20,9 @@ class BlankFragment2 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank2, container, false)
+    ): View {
+        binding = FragmentBlank2Binding.inflate(layoutInflater)
+
+        return binding.root
     }
 }
